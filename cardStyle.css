@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --header: #229E0D;
+    --back: #1B1F19;
+    --link: #000000;
+
+
+}
+
+body {
+    background: var(--back);
+}
+
+header {
+    background: var(--header);
+    height: 100px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+    position: relative;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+header h1 {
+
+    font-family: 'Press Start 2P', monospace;
+    font-size: clamp(24px, 3vw, 40px);
+    color: white;
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+    padding-top: 10px;
+
+}
+
+header p {
+    margin-top: 6px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+#pokeStyle {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 16px;
+    margin-top: 24px;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.card a {
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-end;
+    color: var(--link);
+    font-size: 18px;
+}
+
+.card a:hover {
+    color: #757575;
+    transition: 0.5s;
+}
+
+@media(max-width: 820px) {
+    #pokeStyle {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(max-width: 412px) {
+    #pokeStyle {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.103);
+    width: 80%;
+    border-radius: 10px;
+    padding: 12px;
+    text-align: center;
+    border: solid rgba(0, 0, 0, 0.473) 3px;
+    transition: 0.25s;
+}
+
+.card:hover {
+
+    transform: translateY(-15px) scale(1.1);
+
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
