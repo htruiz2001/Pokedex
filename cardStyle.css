@@ -81,7 +81,7 @@ header p {
     }
 }
 
-@media(max-width: 412px) {
+@media(max-width: 450px) {
     #pokeStyle {
         grid-template-columns: repeat(2, 1fr);
     }
